@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <section class="container-fluid">
+        <div class="row d-flex vh-100 align-items-center">
+            <div id="signin-col" class="col-6 text-center d-flex flex-column">
+                <h1 class="text-black mb-3 fw-bold">Sign in</h1>
+                <div class="d-grid gap-2 d-md-block mb-3">
+                    <a href="#" class="btn border" ><img src="./images/facebook.svg" alt=""></a>
+                    <a href="#" class="btn border mx-3" ><img src="./images/google.svg" alt=""></a>
+                    <a href="#" class="btn border"> <img src="./images/linkedin.svg" alt=""></a>
+                </div>
+                    <p>or use your account</p>
+                    <form class="row d-flex align-items-center flex-column text-center needs-validation" novalidate>
+                        <div class="col-7 mb-3">
+                            <input class="form-control bg-secondary bg-opacity-10" type="email" placeholder="Email" required>
+                        </div>
+                        <div class="col-7 mb-3">
+                            <input class="form-control bg-secondary bg-opacity-10" type="password" placeholder="Password" required>
+                        </div>
+                        <p>Forgot your password?</p>
+                        <input class="btn col-3 bg-danger rounded-pill fw-semibold text-white  px-5 py-3" type="submit" value="SIGN IN">
+                    </form>
+            </div>
+            <div id="signup-col" class="col-6 text-center d-flex flex-column">
+                <h1 class="text-black mb-3 fw-bold">Create Account</h1>
+                <div class="d-grid gap-2 d-md-block mb-3">
+                    <a href="#" class="btn border" ><img src="./images/facebook.svg" alt=""></a>
+                    <a href="#" class="btn border mx-3" ><img src="./images/google.svg" alt=""></a>
+                    <a href="#" class="btn border"> <img src="./images/linkedin.svg" alt=""></a>
+                </div>
+                    <p>or use your email for registration</p>
+                    <form class="row d-flex align-items-center flex-column text-center needs-validation" novalidate>
+                        <div class="col-7 mb-3">
+                            <input class="form-control bg-secondary bg-opacity-10" type="text" placeholder="Name" required>
+                        </div>
+                        <div class="valid-feedback">
+                            Looks good!
+                          </div>
+                        <div class="col-7 mb-3">
+                            <input class="form-control bg-secondary bg-opacity-10" type="email" placeholder="Email" required>
+                        </div>
+                        <div class="valid-feedback">
+                            Looks good!
+                          </div>
+                        <div class="col-7 mb-3">
+                            <input class="form-control bg-secondary bg-opacity-10" type="password" placeholder="Password" required>
+                        </div>
+                        <div class="valid-feedback">
+                            Looks good!
+                          </div>
+                        <input class="btn col-3 bg-danger rounded-pill fw-semibold text-white  px-5 py-3" type="submit" value="SIGN UP">
+                    </form>
+            </div>
+            <div id="slider" class="position-absolute end-0 col-6 text-center bg-danger bg-gradient vh-100 d-flex flex-column align-items-center justify-content-center">
+                <h1 class="text-white mb-3 fw-bold ">Hello, Friend!</h1>
+                <p class="col-6  text-white fs-5 text-opacity-75">Enter your personal details and start journey with us</p>
+                <button id="slide-button" class="col-4 mt-3
+                rounded-pill fw-semibold text-white px-5 py-3 button" href="#">SIGN UP</button>
+            </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+    <script>
+        (() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+    </script>
+  </body>
+</html>
