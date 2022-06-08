@@ -1,18 +1,3 @@
-.button {
-    background-color: transparent;
-    border: 1px solid white;
-}
-
-.button:hover {
-    transform: scale(0.99);
-}
-
-.slideleft {
-    transform: translateX(-100%);
-    transition: 2s;
-}
-
-.slideright {
-    transform: translateX(100%);
-    transition: 2s;
+#welcome-container {
+    left: -50%;
 }
