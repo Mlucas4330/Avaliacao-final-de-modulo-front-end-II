@@ -34,15 +34,15 @@
                         <img width="30px" src="./images/linkedin.svg" alt="" />
                     </div>
                     <p>or use your email for registration</p>
-                    <form class="col-10 needs-validation" novalidate>
+                    <form class="col-10">
                         <div class="mb-3">
-                            <input class="bg-secondary bg-opacity-10 form-control" type="text" placeholder="Nome" required />
+                            <input class="bg-secondary bg-opacity-10 form-control" type="text" placeholder="Nome" required autocomplete="on" />
                         </div>
                         <div class="mb-3">
-                            <input class="bg-secondary bg-opacity-10 form-control" type="email" placeholder="Email" required />
+                            <input class="bg-secondary bg-opacity-10 form-control" type="email" placeholder="Email" required autocomplete="on" />
                         </div>
                         <div class="mb-3">
-                            <input class="bg-secondary bg-opacity-10 form-control" type="password" placeholder="Password" required />
+                            <input class="bg-secondary bg-opacity-10 form-control" type="password" placeholder="Password" required autocomplete="on" />
                         </div>
                         <button class="w-50 py-2 btn btn-danger rounded-pill fw-bold" type="submit">SIGN UP</button>
                     </form>
@@ -58,15 +58,15 @@
                         <img width="30px" src="./images/linkedin.svg" alt="" />
                     </div>
                     <p>or use your account</p>
-                    <form class="col-10 needs-validation" novalidate>
+                    <form class="col-10" >
                         <div class="mb-3">
-                            <input class="bg-secondary bg-opacity-10 form-control" type="email" placeholder="Email" required />
+                            <input class="bg-secondary bg-opacity-10 form-control" type="email" placeholder="Email" required autocomplete="on" />
                         </div>
                         <div class="mb-3">
-                            <input class="bg-secondary bg-opacity-10 form-control" type="password" placeholder="Password" required />
+                            <input class="bg-secondary bg-opacity-10 form-control" type="password" placeholder="Password" required autocomplete="on" />
                         </div>
                         <p>Forget your Password?</p>
-                        <button class="w-50 py-2 btn btn-danger rounded-pill fw-bold" type="submit">SIGN IN</button>
+                        <button id="teste" class="w-50 py-2 btn btn-danger rounded-pill fw-bold" type="submit">SIGN IN</button>
                     </form>
                 </div>
                 <div id="danger-container" class="col-6 h-100 position-absolute end-0 bg-danger bg-gradient rounded"></div>
@@ -86,29 +86,5 @@
             crossorigin="anonymous"
         ></script>
         <script src="./script.js"></script>
-        <script>
-            (() => {
-                'use strict';
-
-                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                const forms = document.querySelectorAll('.needs-validation');
-
-                // Loop over them and prevent submission
-                Array.from(forms).forEach(form => {
-                    form.addEventListener(
-                        'submit',
-                        event => {
-                            if (!form.checkValidity()) {
-                                event.preventDefault();
-                                event.stopPropagation();
-                            }
-
-                            form.classList.add('was-validated');
-                        },
-                        false
-                    );
-                });
-            })();
-        </script>
     </body>
 </html>
