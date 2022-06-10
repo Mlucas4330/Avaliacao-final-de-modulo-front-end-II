@@ -1,9 +1,16 @@
 #welcome-container {
     left: -50%;
 }
-input:invalid {
-    border: 1px solid red;
+
+.my-4:hover {
+    cursor: pointer;
 }
+
 input:valid {
     border: 1px solid green;
 }
+
+body {
+    overflow: hidden;
+}
+

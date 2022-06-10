@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 class="text-center text-md-start mt-5">Meus Recados</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+                <form class="row">
+                    <div class="col-12 col-md-3">
+                        <input class="form-control" type="text" placeholder="Descrição" />
+                    </div>
+                    <div class="col input-group mt-3 mt-md-0">
+                        <input class="form-control" type="text" placeholder="Detalhamento" />
+                        <button class="btn btn-primary" type="submit">Salvar</button>
+                    </div>
+                </form>
+        </div>
+            <div class="container mt-5">
+                <div class="row table-responsive">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>Descrição</th>
+                            <th>Detalhamento</th>
+                            <th>Ação</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th>1</th>
+                            <td>Teste</td>
+                            <td>Teste</td>
+                            <td class="col-1">
+                                <div class="d-flex d-md-none flex-column justify-between align-items-center">
+                                    <button class="w-50 btn rounded-5 bg-success rounded"></button>
+                                    <button class="w-50 btn rounded-5 bg-danger rounded"></button>
+                                </div>
+                                <div class="d-none d-md-flex">
+                                    <button class="btn btn-success">Editar</button>
+                                    <button class="btn btn-danger ms-3">Excluir</button>
+                                </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous"
+        ></script>
+        <script src="./dist/script.js"></script>
+    </body>
+</html>
