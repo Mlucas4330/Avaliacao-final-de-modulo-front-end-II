@@ -23,17 +23,17 @@
         <div class="container">
                 <form class="row">
                     <div class="col-12 col-md-3">
-                        <input class="form-control" type="text" placeholder="Descrição" />
+                        <input class="form-control" type="text" placeholder="Descrição" id="descricao"/>
                     </div>
                     <div class="col input-group mt-3 mt-md-0">
-                        <input class="form-control" type="text" placeholder="Detalhamento" />
+                        <input class="form-control" type="text" placeholder="Detalhamento" id="detalhamento" />
                         <button class="btn btn-primary" type="submit">Salvar</button>
                     </div>
                 </form>
         </div>
             <div class="container mt-5">
                 <div class="row table-responsive">
-                    <table class="table table-striped table-bordered">
+                    <table class="table table-striped table-bordered" id="table">
                         <thead>
                           <tr>
                             <th>#</th>
@@ -42,21 +42,8 @@
                             <th>Ação</th>
                           </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="tbody">
                           <tr>
-                            <th>1</th>
-                            <td>Teste</td>
-                            <td>Teste</td>
-                            <td class="col-1">
-                                <div class="d-flex d-md-none flex-column justify-between align-items-center">
-                                    <button class="w-50 btn rounded-5 bg-success rounded"></button>
-                                    <button class="w-50 btn rounded-5 bg-danger rounded"></button>
-                                </div>
-                                <div class="d-none d-md-flex">
-                                    <button class="btn btn-success">Editar</button>
-                                    <button class="btn btn-danger ms-3">Excluir</button>
-                                </div>
-                            </td>
                           </tr>
                         </tbody>
                       </table>
@@ -67,6 +54,6 @@
             integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
             crossorigin="anonymous"
         ></script>
-        <script src="./dist/script.js"></script>
+        <script src="./dist/recados.js"></script>
     </body>
 </html>

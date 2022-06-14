@@ -4,7 +4,8 @@ const signinmobileanimator = document.querySelector("#signin-mobile-animator") a
 const sectionsignup = document.querySelector("#section-sign-up") as HTMLDivElement
 
 
-signupnmobileanimator.addEventListener("click", () => {
+signupnmobileanimator.addEventListener("click", (e) => {
+    e.preventDefault()
     sectionsignin.style.cssText = `
     transform: translateY(-100%);
     transition: ease-in-out 1s;
@@ -12,7 +13,8 @@ signupnmobileanimator.addEventListener("click", () => {
 `
 })
 
-signinmobileanimator.addEventListener("click", () => {
+signinmobileanimator.addEventListener("click", (e) => {
+    e.preventDefault()
     sectionsignin.style.cssText = `
     transform: translateY(0%);
     transition: ease-in-out 1s;

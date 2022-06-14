@@ -60,37 +60,37 @@ buttonwelcome.addEventListener("click", () => {
         z-index: 5;
     `;
 });
-const formregister = document.querySelector("#form-register");
-formregister.addEventListener("submit", (e) => {
-    const nomeRegister = document.querySelector("#nome-register");
-    const emailRegister = document.querySelector("#email-register");
-    const senhaRegister = document.querySelector("#senha-register");
-    e.preventDefault();
-    const usuario = {
-        nome: nomeRegister.value,
-        email: emailRegister.value,
-        senha: senhaRegister.value,
-    };
-    const usuarioToLocalStorage = JSON.stringify(usuario);
-    localStorage.setItem("Usuario", usuarioToLocalStorage);
-});
-const formlogin = document.querySelector("#form-login");
-formlogin.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const emailLogin = document.querySelector("#email-login");
-    const senhalogin = document.querySelector("#senha-login");
-    const usuario = JSON.parse(localStorage.getItem("Usuario"));
-    let validado = false;
-    if (emailLogin.value === usuario.email) {
-        validado = true;
-    }
-    if (senhalogin.value === usuario.senha) {
-        validado = true;
-    }
-    if (validado === true) {
-        window.location.href = "recados.html";
-    }
-    else {
-        alert("Email ou senha inválidos");
-    }
-});
+// const formregister = document.querySelector("#form-register");
+// formregister.addEventListener("submit", (e) => {
+//     const nomeRegister = document.querySelector("#nome-register");
+//     const emailRegister = document.querySelector("#email-register");
+//     const senhaRegister = document.querySelector("#senha-register");
+//     e.preventDefault();
+//     const usuario = {
+//         nome: nomeRegister.value,
+//         email: emailRegister.value,
+//         senha: senhaRegister.value,
+//     };
+//     const usuarioToLocalStorage = JSON.stringify(usuario);
+//     localStorage.setItem("Usuario", usuarioToLocalStorage);
+// });
+// const formlogin = document.querySelector("#form-login");
+// formlogin.addEventListener("submit", (e) => {
+//     e.preventDefault();
+//     const emailLogin = document.querySelector("#email-login");
+//     const senhalogin = document.querySelector("#senha-login");
+//     const usuario = JSON.parse(localStorage.getItem("Usuario"));
+//     let validado = false;
+//     if (emailLogin.value === usuario.email) {
+//         validado = true;
+//     }
+//     if (senhalogin.value === usuario.senha) {
+//         validado = true;
+//     }
+//     if (validado === true) {
+//         window.location.href = "recados.html";
+//     }
+//     else {
+//         alert("Email ou senha inválidos");
+//     }
+// });
