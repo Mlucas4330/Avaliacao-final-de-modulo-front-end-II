@@ -8,12 +8,14 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = 'index.html'
     }
     bemVindo()
+    read()
 })
 
 function bemVindo() {
     const usuarionome = JSON.parse(localStorage.getItem("Usuarios"));
     usuario.innerText = usuarionome.nome
 }
+
 
 
 function logout() {
@@ -37,53 +39,56 @@ function create() {
         usuario.descricao.push(descricoes);
         usuario.detalhamento.push(detalhamentos);
         localStorage.setItem("Usuarios", JSON.stringify(usuario))
-        read()
     }
+    read()
 }
 
 function read() {
     const recados = JSON.parse(localStorage.getItem("Usuarios"));
-    const tbody = document.querySelector("#tbody");
-    const tr = document.createElement('tr');
-    const id = Math.floor(Math.random() * 100)
-    tr.innerHTML = `
-                <td> # ${id} </td>
-                <td> ${recados.descricao.slice(-1)} </td>
-                <td> ${recados.detalhamento.slice(-1)} </td> 
-                <td class="col-1">
-                <div class="d-flex d-md-none flex-column justify-between align-items-center">
-                    <button class="w-50 btn rounded-5 bg-success rounded"></button>
-                    <button class="w-50 btn rounded-5 bg-danger rounded"></button>
-                </div>
-                <div class="d-none d-md-flex">
-                    <button class="btn btn-success editBtn">Editar</button>
-                    <button class="btn btn-danger ms-3 deleteBtn">Excluir</button>
-                </div>
-                </td>
-        `;
-    tbody.appendChild(tr)
-    deletar()
-    update()
+        const tbody = document.querySelector("#tbody");
+        const tr = document.createElement('tr');
+        const id = Math.floor(Math.random() * 100);
+        for(i = 0; i < recados.descricao.length; i++){
+            tr.innerHTML = `
+                        <td> # ${id} </td>
+                        <td> ${recados.descricao[i]} </td>
+                        <td> ${recados.detalhamento[i]} </td> 
+                        <td class="col-1">
+                        <div class="d-flex d-md-none flex-column justify-between align-items-center">
+                            <button class="w-50 btn rounded-5 bg-success rounded"></button>
+                            <button class="w-50 btn rounded-5 bg-danger rounded"></button>
+                        </div>
+                        <div class="d-none d-md-flex">
+                            <button class="btn btn-success editBtn">Editar</button>
+                            <button class="btn btn-danger ms-3 deleteBtn">Excluir</button>
+                        </div>
+                        </td>
+                `;
+            tbody.appendChild(tr)
+            deletar()
+            update()
+        }
 }
 
-function update(){
+function update() {
     const btn = document.querySelectorAll(".editBtn")
     btn.forEach(btn => {
         btn.addEventListener("click", () => {
-             btn.innerHTML = 'oi'
+            btn.innerHTML = 'oi'
         })
     })
 }
 
 function deletar() {
-   const btn = document.querySelectorAll(".deleteBtn")
-   btn.forEach(btn => {
-       btn.addEventListener("click", () => {
-            btn.parentNode.parentNode.parentNode.remove()
-       })
-   })
-}
+    const btns = document.querySelectorAll(".deleteBtn");
+    btns.forEach(btn => {
+        btn.addEventListener("click", () => {
+        console.log(btn.parentNode.parentNode.parentNode)    
+            
+        })
+    })
 
+    }
 
 
 document.querySelector("#logout").addEventListener("click", logout);
