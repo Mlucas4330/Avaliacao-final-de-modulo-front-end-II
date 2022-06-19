@@ -1,3 +1,5 @@
+//@ts-nocheck
+
 // REGISTER & LOGIN
 const nomeRegister = document.querySelector("#nome-register") as HTMLInputElement;
 const emailRegister = document.querySelector("#email-register") as HTMLInputElement;

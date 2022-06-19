@@ -1,3 +1,5 @@
+//@ts-nocheck
+
 const btnLogout = document.querySelector("#logout") as HTMLButtonElement;
 const form = document.querySelector("form") as HTMLFormElement;
 const desc = document.querySelector("#descricao") as HTMLInputElement;
